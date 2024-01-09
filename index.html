@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/2dd5f1c1c7.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSGFpoOHR2l2Yh8vQGJb8Utgf7Uf+HJ7VTIIJLccfvT2xJ9d+EaNwJGh1pZLrQQ1sMJ" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Hotels</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link" data-item="Home">Home <span class="sr-only">(Current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-item="About us">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#food-court" class="nav-link" data-item="Food-Court">Food-Court</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-item="Menu">Menu</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#" data-item="Breakfast">BreakFast</a>
+                        <a class="dropdown-item" href="#" data-item="Lunch">Lunch</a>
+                        <a class="dropdown-item" href="#" data-item="Dinner">Dinner</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-item="Contact us">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <button href="#" class="nav-link login" data-item="Login" style="border: none;">Login</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        $(document).ready(function() {
+            $(".nav-link, .dropdown-item").on("click", function() {
+                $(".navbar-toggler").trigger("click");
+            });
+        });
+    </script>
+    <div class="image-card">
+        <img src="assets/img/hotel.jpg" alt="Image" style="filter: blur(2px);">
+        <div class="image-text">
+            <h1>Enjoy Your</h1>
+            <h1 class="img-text1">Dream Vacation</h1>
+        </div>
+        <div class="image-para">
+            <h3>Book your room now to get exciting offers!</h3>
+            <h3>To Get Offers on Booking Use CODE 'HOTEL23'</h3>
+        </div>
+        <div class="card">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card-content">
+                        <h3 class="card-title">Facilites</h3>
+                        <p class="more">See More</p>
+                    </div>
+                    <div class="card-icons">
+                        <i class="fa-solid fa-person-swimming" style="font-size: 24px; margin-left: 2rem; margin-bottom: 1rem;"></i>
+                        <i class="fa-solid fa-utensils" style="font-size: 24px; margin-left: 2rem; margin-bottom: 1rem;"></i>
+                        <i class="fa-solid fa-bed" style="font-size: 24px; margin-left: 2rem; margin-bottom: 1rem;"></i>
+                        <i class="fa-solid fa-shower" style="font-size: 24px; margin-left: 2rem; margin-bottom: 1rem;"></i>
+                    </div>
+                    <div class="vl"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="card-title plan" style="font-size: 18px; padding-top: 2rem;">Plan Your Journey</h3>
+                    <form>
+                        <div class="input-container">
+                            <label for="dateInput">FROM: </label>
+                            <input type="date" id="dateInput" name="date"/>
+                        </div>
+                        <div class="input-container2">
+                            <label for="dateInput2">TO: </label>
+                            <input type="date" id="dateInput2" name="date"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container align-items-center justify-content-center" style="margin-top: 5rem;" id="food-court">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card1">
+                    <div class="card-content1">
+                        <img src="assets/img/burger.jpg" alt="burger" class="food-image img-fluid">
+                        <h2 class="food-title">Burger</h2>
+                        <p class="food-description">Enjoy this month-watering dish that will tantalize your taste buds.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card1">
+                    <div class="card-content1">
+                        <img src="assets/img/pizza.jpg" alt="Pizza" class="food-image img-fluid" style="width: 90%;">
+                        <h2 class="food-title">Pizza</h2>
+                        <p class="food-description">Enjoy this month-watering dish that will tantalize your taste buds.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-top: 50px;">
+                <div class="card card1">
+                    <div class="card-content1">
+                        <img src="assets/img/noodles.jpg" alt="Food" class="food-image img-fluid food">
+                        <h2 class="food-title">Noodles</h2>
+                        <p class="food-description">Enjoy this month-watering dish that will tantalize your taste buds.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-top: 50px;">
+                <div class="card card1">
+                    <div class="card-content1">
+                        <img src="assets/img/fries.jpg" alt="Fries" class="food-image img-fluid fries">
+                        <h2 class="food-title">Fries</h2>
+                        <p class="food-description">Enjoy this month-watering dish that will tantalize your taste buds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid img-container" id="amenities">
+        <img src="assets/img/swimming.jpg" alt="amenities" class="img-fluid img-swim">
+        <div class="card-amenities">
+            <h3 class="amn-heading">Our Amenities</h3>
+            <p class="amn-desc">The Hotel is arranged on three floors without a lift. On the ground floor, apart from the reception, there is a comfortable lounge where you can sit and drink tea</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
